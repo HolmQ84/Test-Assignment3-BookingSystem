@@ -1,7 +1,7 @@
 package datalayer;
 
-import dto.Customer;
-import dto.CustomerCreation;
+import dto.Customer.Customer;
+import dto.Customer.CustomerCreation;
 
 import java.sql.*;
 import java.util.ArrayList;

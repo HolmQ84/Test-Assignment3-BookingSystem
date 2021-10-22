@@ -1,6 +1,6 @@
 package servicelayer;
 
-import dto.Customer;
+import dto.Customer.Customer;
 
 import java.sql.SQLException;
 import java.util.Collection;

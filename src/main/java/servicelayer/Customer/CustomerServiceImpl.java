@@ -1,8 +1,8 @@
 package servicelayer;
 
 import datalayer.CustomerStorage;
-import dto.Customer;
-import dto.CustomerCreation;
+import dto.Customer.Customer;
+import dto.Customer.CustomerCreation;
 
 import java.sql.SQLException;
 import java.util.Collection;
