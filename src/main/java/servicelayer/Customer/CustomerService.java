@@ -1,4 +1,4 @@
-package servicelayer;
+package servicelayer.Customer;
 
 import dto.Customer.Customer;
 

@@ -1,13 +1,13 @@
 package unit.servicelayer.customer;
 
-import datalayer.CustomerStorage;
+import datalayer.CustomerStorage.CustomerStorage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import servicelayer.CustomerService;
-import servicelayer.CustomerServiceException;
-import servicelayer.CustomerServiceImpl;
+import servicelayer.Customer.CustomerService;
+import servicelayer.Customer.CustomerServiceException;
+import servicelayer.Customer.CustomerServiceImpl;
 
 import java.sql.SQLException;
 import java.util.Date;

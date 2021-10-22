@@ -1,4 +1,4 @@
-package dto;
+package dto.Customer;
 
 public class CustomerCreation {
     public String getFirstname(){

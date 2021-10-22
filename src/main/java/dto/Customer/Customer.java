@@ -1,4 +1,4 @@
-package dto;
+package dto.Customer;
 
 public class Customer {
     private final int id;

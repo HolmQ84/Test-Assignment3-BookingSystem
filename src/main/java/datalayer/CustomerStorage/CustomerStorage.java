@@ -1,4 +1,4 @@
-package datalayer;
+package datalayer.CustomerStorage;
 
 import dto.Customer.Customer;
 import dto.Customer.CustomerCreation;

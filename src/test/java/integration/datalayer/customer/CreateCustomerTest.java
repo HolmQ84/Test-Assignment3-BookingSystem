@@ -1,9 +1,9 @@
 package integration.datalayer.customer;
 
 import com.github.javafaker.Faker;
-import datalayer.CustomerStorage;
-import datalayer.CustomerStorageImpl;
-import dto.CustomerCreation;
+import datalayer.CustomerStorage.CustomerStorage;
+import datalayer.CustomerStorage.CustomerStorageImpl;
+import dto.Customer.CustomerCreation;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

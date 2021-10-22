@@ -1,7 +1,7 @@
 package main;
 
-import datalayer.CustomerStorageImpl;
-import dto.Customer;
+import datalayer.CustomerStorage.CustomerStorageImpl;
+import dto.Customer.Customer;
 
 import java.sql.SQLException;
 

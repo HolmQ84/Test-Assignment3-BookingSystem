@@ -1,6 +1,6 @@
-package servicelayer;
+package servicelayer.Customer;
 
-import datalayer.CustomerStorage;
+import datalayer.CustomerStorage.CustomerStorage;
 import dto.Customer.Customer;
 import dto.Customer.CustomerCreation;
 
