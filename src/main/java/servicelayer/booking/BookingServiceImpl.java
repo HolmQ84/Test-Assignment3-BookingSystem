@@ -6,7 +6,7 @@ import dto.Booking.Booking;
 import java.sql.SQLException;
 import java.time.LocalTime;
 import java.util.Collection;
-import java.util.Date;
+import java.sql.Date;
 
 public class BookingServiceImpl implements BookingService{
 
