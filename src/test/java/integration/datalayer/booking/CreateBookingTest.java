@@ -35,6 +35,7 @@ public class CreateBookingTest {
         Faker faker = new Faker();
 
         Long timer = faker.date().birthday().getTime();
+
         for (int i = 0; i < numBookings; i++) {
 
             BookingCreation b = new BookingCreation(

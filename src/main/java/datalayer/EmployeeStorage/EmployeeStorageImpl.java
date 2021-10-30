@@ -18,7 +18,7 @@ public class EmployeeStorageImpl implements EmployeeStorage{
         password = pass;
     }
 
-    private Connection getConnection() throws SQLException{
+    private Connection getConnection() throws SQLException {
         return DriverManager.getConnection(connectionString, username, password);
     }
 

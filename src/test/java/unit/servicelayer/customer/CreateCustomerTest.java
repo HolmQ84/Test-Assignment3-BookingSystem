@@ -47,8 +47,7 @@ public class CreateCustomerTest {
         //   'createCustomer' with an argument whose 'firstname' == firstName and
         //   whose 'lastname' == lastName
         verify(storageMock, times(1))
-                .createCustomer(
-                        argThat(x -> x.firstname.equals(firstName) &&
+                .createCustomer(argThat(x -> x.firstname.equals(firstName) &&
                                 x.lastname.equals(lastName)));
     }
 }
