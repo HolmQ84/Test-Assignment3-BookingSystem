@@ -35,7 +35,7 @@ public class CreateBookingTest {
     }
 
     @Test
-    public void mustCallStorageWhenCreatingCustomer() throws BookingServiceException, SQLException {
+    public void mustCallStorageWhenCreatingBookings() throws BookingServiceException, SQLException {
         Faker faker = new Faker();
 
 
@@ -52,9 +52,9 @@ public class CreateBookingTest {
         verify(storageMock, times(1))
                 .createBooking(argThat(x -> x.customerId == customerId &&
                                 x.employeeId == employeeId &&
-                                x.day.equals("2021-08-04") &&
-                                x.start.equals("12:00:00") &&
-                                x.end.equals("14:00:00")));
+                                x.day.toString().equals("2021-08-04") &&
+                                x.start.toString().equals("12:00:00") &&
+                                x.end.toString().equals("14:00:00")));
 
     }
 }
