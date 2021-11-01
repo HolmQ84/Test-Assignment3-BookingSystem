@@ -23,7 +23,7 @@ public class CreateBookingTest {
 
     @BeforeAll
     public void Setup() throws SQLException {
-        bookingStorage = new BookingStorageImpl("jdbc:mysql://localhost:3306/bookingsystemtest", "Test1234", "Test1234");
+        bookingStorage = new BookingStorageImpl("jdbc:mysql://localhost:3306/bookingsystem", "Test1234", "Test1234");
 
         var numBookings = bookingStorage.getBookings().size();
         if (numBookings < 50) {

@@ -9,28 +9,30 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <build>
         <plugins>
             <plugin>
-                <!--
-                These are used for running the maven target flyway:migrate
-                -->
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
-                <version>7.0.0</version>
+                <version>8.0.2</version>
                 <configuration>
-                    <url>jdbc:mysql://localhost:3306/</url>
-                    <user>root</user>
-                    <password>schmeep7</password>
-                    <defaultSchema>DemoApplication</defaultSchema>
+                    <baselineOnMigrate>true</baselineOnMigrate>
+                    <url>jdbc:mysql://localhost:3306/bookingsystem</url>
+                    <user>Test1234</user>
+                    <password>Test1234</password>
+                    <defaultSchema>bookingsystem</defaultSchema>
                     <createSchemas>true</createSchemas>
                     <schemas>
-                        <schema>DemoApplication</schema>
+                        <schema>bookingsystem</schema>
                     </schemas>
+                    <locations>
+                        <location>classpath:/db/migration</location>
+                    </locations>
                 </configuration>
             </plugin>
 
@@ -39,8 +41,10 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>13</source>
-                    <target>13</target>
+                    <source>11</source>
+                    <target>11</target>
+                    <testSource>11</testSource>
+                    <testTarget>11</testTarget>
                 </configuration>
             </plugin>
             <plugin>
@@ -48,11 +52,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
             </plugin>
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-failsafe-plugin</artifactId>-->
-            <!--                <version>3.0.0-M4</version>-->
-            <!--            </plugin>-->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -75,24 +74,6 @@
 
         </plugins>
     </build>
-
-    <!--    <reporting>-->
-    <!--        <plugins>-->
-    <!--            <plugin>-->
-    <!--                <groupId>org.jacoco</groupId>-->
-    <!--                <artifactId>jacoco-maven-plugin</artifactId>-->
-    <!--                <reportSets>-->
-    <!--                    <reportSet>-->
-    <!--                        <reports>-->
-    <!--                            &lt;!&ndash; select non-aggregate reports &ndash;&gt;-->
-    <!--                            <report>report</report>-->
-    <!--                        </reports>-->
-    <!--                    </reportSet>-->
-    <!--                </reportSets>-->
-    <!--            </plugin>-->
-    <!--        </plugins>-->
-    <!--    </reporting>-->
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -118,13 +99,11 @@
             <version>1.7.30</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.27</version>
         </dependency>
-
 
         <dependency>
             <groupId>org.testcontainers</groupId>
@@ -153,7 +132,7 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <version>7.0.0</version>
+            <version>8.0.2</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -163,9 +142,7 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
-            <version>3.5.13</version>
+            <version>4.0.0</version>
         </dependency>
-
-
     </dependencies>
 </project>

@@ -24,7 +24,7 @@ class CreateCustomerTest {
     @BeforeAll
     public void Setup() throws SQLException {
 
-        customerStorage = new CustomerStorageImpl("jdbc:mysql://localhost:3306/bookingsystemtest", "Test1234", "Test1234");
+        customerStorage = new CustomerStorageImpl("jdbc:mysql://localhost:3306/bookingsystem", "Test1234", "Test1234");
 
         var numCustomers = customerStorage.getCustomers().size();
         if (numCustomers < 100) {

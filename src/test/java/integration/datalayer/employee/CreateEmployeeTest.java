@@ -23,7 +23,7 @@ public class CreateEmployeeTest {
     @BeforeAll
     public void Setup() throws SQLException {
 
-        employeeStorage = new EmployeeStorageImpl("jdbc:mysql://localhost:3306/bookingsystemtest", "Test1234", "Test1234");
+        employeeStorage = new EmployeeStorageImpl("jdbc:mysql://localhost:3306/bookingsystem", "Test1234", "Test1234");
 
         var numEmployee = employeeStorage.getEmployees().size();
         if (numEmployee < 20) {
